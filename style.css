@@ -1,7 +1,7 @@
 *{
     padding: 0;
     margin: 0;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
 /* Banner de inicio */
@@ -9,7 +9,7 @@
     width: 100%;
     text-align: center;
     padding: 20px;
-    color: white;
+    color: rgb(255, 255, 255);
     box-sizing: border-box;
 }
 
@@ -20,20 +20,45 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #273746;
+    background: url(/images/fondo-opcion1.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.tarjeta-inicio{
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    padding: 1rem;
 }
 
 .loginbody form{
     display: flex;
     flex-direction: column;
-    background-color: white;
     text-align: center;
-    box-shadow: 0 10px 20px black;
     padding: 20px 25px;
 }
 
+.loginbody form input{
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    width: 270px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    color: white;
+}
+
+.loginbody form input::placeholder{
+    color: white;
+    position: relative;
+    left: 10px;
+}
+
 .loginbody form .title{
-    color: #000;
+    color: #ffffff;
     font-size: 35px;
     font-weight: 700;
     margin-bottom: 30px;
@@ -56,7 +81,7 @@
 .loginbody form label .fa-solid{
     font-size: 20px;
     margin-right: 10px;
-    color: #273746;
+    color: #ffffff;
 }
 
 .loginbody form label input{
@@ -65,23 +90,26 @@
 }
 
 .loginbody form .link{
-    color:rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
     margin-bottom: 15px;
 }
 
 .loginbody form button{
-    color: white;
+    color: rgb(0, 0, 0);
     border: none;
-    background-color:#273746;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 30px;
+    background-color:#ffffff;
     padding: 10px 15px;
     cursor: pointer;
     font-size: 20px;
-    transition: all 0.3s;
-    margin-bottom: 5px;
+    transition: all 0.4s;
+    margin: 10px
 }
 
 .loginbody form button:hover{
-    background-color: #566573;
+    background-color: transparent;
+    color: white;
 }
 
 body {
@@ -168,6 +196,30 @@ nav ul li a:hover {
 
 
 /* Pagina de Market */
+.cotizacionBlue{
+    background-color: #babec0;
+    text-align: center;
+    border-radius: 5px;
+    margin: 1rem;
+}
+
+.cotizacionBlue h3{
+    padding-top: 1rem;
+}
+
+.dolarDiv{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem;
+    border-radius: 5px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.dolarDiv p{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
 
 .contenedorMarket{
     display: flex;
@@ -198,6 +250,23 @@ nav ul li a:hover {
     border-radius: 5px;
     background-image: url('images/backgr.png');
     transition: all 0.3s;
+}
+
+.contenedorMarket #cart{
+    background-color: #babec0;
+    text-align: center;
+    width: 100vmax;
+    margin: 1rem;
+    border-radius: 5px;
+}
+
+.contenedorMarket #cart h2{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.contenedorMarket #cart button{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .contenedorMarket div:hover{
@@ -295,4 +364,17 @@ nav ul li a:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     z-index: 1000;
     font-weight: bold;
+}
+
+/* sweet alert */
+.swaltitle{
+    color: black;
+}
+
+.swaltext{
+    color: black;
+}
+
+.swaltext2{
+    color: red;
 }
